@@ -202,3 +202,12 @@ func WithMaxReconsumeTimes(times int32) Option {
 		opts.MaxReconsumeTimes = times
 	}
 }
+
+func WithInstanceName(instanceName string) Option {
+	return func(opts *consumerOptions) {
+		if group == "" {
+			return
+		}
+		opts.InstanceName = instanceName
+	}
+}
