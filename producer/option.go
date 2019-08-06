@@ -88,3 +88,12 @@ func WithCredentials(c primitive.Credentials) Option {
 		options.ClientOptions.Credentials = c
 	}
 }
+
+func WithInstanceName(instanceName string) Option {
+	return func(options *producerOptions) {
+		if instanceName == "" {
+			return
+		}
+		opts.InstanceName = instanceName
+	}
+}
