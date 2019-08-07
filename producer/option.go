@@ -94,6 +94,6 @@ func WithInstanceName(instanceName string) Option {
 		if instanceName == "" {
 			return
 		}
-		opts.InstanceName = instanceName
+		options.InstanceName = instanceName
 	}
 }
